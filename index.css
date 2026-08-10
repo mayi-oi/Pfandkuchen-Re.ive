@@ -7,6 +7,10 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .Header-div {
     position: relative;
     overflow: hidden;
@@ -38,6 +42,19 @@ body {
     animation: Geilelogo 0.7s;
 }
 
+.Header-line {
+    margin-top: -8px;
+    margin-bottom: 8px;
+    width: 480px;
+    height: 3px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #ffffff, transparent);
+}
+
+.Header-C {
+    opacity: 0.5;
+}
+
 @keyframes Geilelogo {
     from { transform: translateX(-18px); opacity: 0; color: #9da1ff;}
     to { transform: translateX(0px); opacity: 1; color: #ffffff;}
@@ -46,11 +63,12 @@ body {
 .Header-button {
     display: flex;
     gap: 8px;
-    text-align: center;
 }
 
 .Header-btn {
-    padding: 6px 18px;
+    display: flex;
+    gap: 8px;
+    padding: 6px 28px;
     border-radius: 18px;
     box-shadow: 0 0 0 2px #9da1ff;
     background-color: #9da1ff;
@@ -60,8 +78,8 @@ body {
 }
 
 .Header-btn:hover {
-    color: #000000;
-    background-color: #ffffff;
+    box-shadow: 0 0 0 2px #7e8bff;
+    background-color: #7e8bff;
 }
 
 .Header-btn-andere:hover {
@@ -70,11 +88,16 @@ body {
 }
 
 .Header-btn-andere {
-    padding: 6px 18px;
+    display: flex;
+    gap: 8px;
+    padding: 6px 28px;
     border-radius: 18px;
     box-shadow: 0 0 0 2px #ffffff;
     background-color: transparent;
-    backdrop-filter: blur(4px);
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.Header-btn img, .Header-btn-andere img {
+    width: 28px;
 }
