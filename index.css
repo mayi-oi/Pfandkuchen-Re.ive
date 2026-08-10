@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
+    background-color: #e4e6ff;
     font-family: Google-sans;
     cursor: default;
     -webkit-tap-highlight-color: transparent;
@@ -15,6 +16,7 @@ body {
     position: relative;
     overflow: hidden;
     padding: 240px 38px;
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.38), transparent);
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     color: #ffffff;
@@ -22,7 +24,7 @@ body {
     text-align: left;
 }
 
-.Hintergrund-video {
+.Header-hintergrund-video {
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -30,6 +32,12 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
+}
+
+.Hintergrund-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .Header-1 {
@@ -100,4 +108,93 @@ body {
 
 .Header-btn img, .Header-btn-andere img {
     width: 28px;
+}
+
+.Hauptcontent-div {
+    margin: auto;
+    width: 85%;
+}
+
+.Haupt-übermich {
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 18px;
+    border: solid 2px #6b6f87;
+    border-radius: 14px;
+    background-color: #8990B5FF;
+}
+
+.übermich-grid, .Übermich-grid {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.übermich-pros {
+    padding: 8px 18px;
+    border: solid 2px #5e8a55;
+    border-radius: 14px;
+    background-color: #b8eeae;
+    color: #5e8a55;
+}
+
+.übermich-cons {
+    padding: 8px 18px;
+    border: solid 2px #8a5555;
+    border-radius: 14px;
+    background-color: #eeaeae;
+    color: #8a5555;
+}
+
+.Übermich-tech {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 18px;
+    border: solid 2px #555e8a;
+    border-radius: 14px;
+    background-color: #aebbee;
+    color: #55608a;
+}
+
+.Übermich-tech a {
+    color: #eff2ff;
+}
+
+.Übermich-bold {
+    font-weight: 500;
+}
+
+@media (max-width: 770px) {
+    .Header-div {
+        background-image: linear-gradient(to bottom, rgb(0 0 0 / 0.38), transparent);
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        padding: 140px 38px;
+    }
+
+    .Header-2 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .Header-button {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+        .Header-line {
+            width: 240px;
+        }
+
+    .Hauptcontent-div {
+        width: 95%;
+    }
+
+    .übermich-grid, .Übermich-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
