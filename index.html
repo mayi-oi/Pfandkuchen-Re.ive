@@ -8,7 +8,41 @@
     <link rel="stylesheet" href="/src/Schriftart/font.css">
 </head>
 <body>
-    <div class="Header-div">
+    <!-- Hauptmenu für Desktop und Mobilen! -->
+    <div class="Hauptmenu-ux">
+        <div class="Hauptmenu-toggle" onclick="Menutoggle()"><img src="src/Bilder/Icon/menu_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+    </div>
+    <div class="Hauptmenu-content" id="Menu-content">
+        <div class="Hauptmenu-btn" onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})"><img src="src/Bilder/Icon/home_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Startseite!</p></div>
+        <div class="Hauptmenu-btn" onclick="document.getElementById('aboutme').scrollIntoView({behavior: 'smooth'})"><img src="src/Bilder/Icon/person_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Über mich!</p></div>
+        <div class="Hauptmenu-btn" onclick="document.getElementById('cool-project').scrollIntoView({behavior: 'smooth'})"><img src="src/Bilder/Icon/folder_code_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Projekte!</p></div>
+        <div class="Hauptmenu-btn" onclick="Musiktoggle()"><img src="src/Bilder/Icon/music_note_2_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Musikplayer!</p></div>
+    </div>
+
+    <!-- Musikplayer! (Machen den Website... leben!) -->
+    <div class="Musikplayer-topbar">
+        <div class="Musikplayer-content">
+            <div class="Musikplayer-cover">
+                <img class="Musikcover" id="musik-cover" src="src/Hintergrund/Bilder/Bildschirmfoto_20260811_124630.png">
+            </div>
+            <div class="Musikplayer-header"><h2>Musikplayer!</h2></div>
+            <div class="Musikplayer-info">
+                <span class="Musik-bold" id="Musik-title">Hey guys</span>
+                <br>
+                <span class="Musik-small" id="Musik-name">Hey guys</span>
+            </div>
+            <div class="Musikplayer-kontroll">
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/repeat_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/skip_previous_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/pause_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/skip_next_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/shuffle_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/menu_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Header-div" id="home">
         <div class="Header-hintergrund">
             <div class="Header-hintergrund-video">
                 <video class="Hintergrund-video" autoplay loop muted><source src="src/Hintergrund/Video/beyond-the-rolling-hills.1920x1080.mp4"></video>
@@ -180,5 +214,6 @@
             <p align="center" class="Footer-p">Mayi.-oi 2026 | Powered von: <a style="color: #3a405e; font-weight: 600;" href="https://www.netlify.com">Netfily!</a></p>
         </div>
     </div>
+<script src="JavaScript/toggle.js"></script>
 </body>
 </html>

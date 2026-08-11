@@ -12,6 +12,150 @@ body {
     display: none;
 }
 
+.Hauptmenu-ux {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 100000;
+}
+
+.Hauptmenu-toggle {
+    display: flex;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 2px #aebbee;
+    background-color: #3a405e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Hauptmenu-toggle:hover {
+    box-shadow: 0 0 0 2px #3a405e;
+    background-color: #9da1ff;
+}
+
+.Hauptmenu-content.open {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+}
+
+.Hauptmenu-content {
+    opacity: 0;
+    pointer-events: none;
+    width: 12rem;
+    position: fixed;
+    bottom: 74px;
+    right: 18px;
+    z-index: 100000;
+    padding: 8px 18px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 2px #aebbee;
+    background-color: #3a405e;
+    transform: translateY(8px);
+    transition: all 0.12s ease;
+}
+
+.Hauptmenu-btn {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 24px;
+    border-radius: 14px;
+    color: #aebbee;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Hauptmenu-btn:hover {
+    background-color: #aebbee;
+    color: #55608a;
+}
+
+.Hauptmenu-btn img {
+    width: 32px;
+}
+
+.Musikplayer-topbar {
+    display: none;
+    pointer-events: none;
+    right: 34%;
+    left: 34%;
+    position: fixed;
+    width: 34%;
+    z-index: 100000;
+}
+
+.Musikplayer-content {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 18px;
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.38), transparent);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    color: #ffffff;
+    line-height: 0.4;
+    text-align: left;
+}
+
+.Musikplayer-cover {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.Musikplayer-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Musikplayer-header {
+    opacity: 0.4;
+}
+
+.Musikplayer-info {
+    line-height: 1;
+}
+
+.Musik-bold {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.Musikplayer-kontroll {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.Musikplayer-kontroll img {
+    width: 32px;
+}
+
+.Musikplayer-btn {
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.Musikplayer-btn:hover {
+    background-color: rgb(255 255 255 / 0.25);
+}
+
 .Header-div {
     position: relative;
     overflow: hidden;
@@ -208,7 +352,7 @@ body {
     object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
 }
 
 .Projekten-button {
@@ -266,6 +410,14 @@ body {
     .Header-button, .Projekten-button {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .Musikplayer-topbar {
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
     }
 
         .Header-line {
