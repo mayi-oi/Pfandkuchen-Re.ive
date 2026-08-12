@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfandkuchen Re:model!</title>
+    <title>Pfandkuchen Re:ive!</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="/src/Schriftart/font.css">
 </head>
@@ -19,7 +19,9 @@
         <div class="Hauptmenu-btn" onclick="Musiktoggle()"><img src="src/Bilder/Icon/music_note_2_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Musikplayer!</p></div>
     </div>
 
-    <!-- Musikplayer! (Machen den Website... leben!) -->
+    <!-- Musikplayer! (Machen dass, Website leben!) -->
+    <audio id="audio-player"></audio>
+    <input type="file" id="upload-input" accept="audio/*" multiple hidden>
     <div class="Musikplayer-topbar">
         <div class="Musikplayer-content">
             <div class="Musikplayer-cover">
@@ -27,20 +29,46 @@
             </div>
             <div class="Musikplayer-header"><h2>Musikplayer!</h2></div>
             <div class="Musikplayer-info">
-                <span class="Musik-bold" id="Musik-title">Hey guys</span>
+                <span class="Musik-bold" id="Musik-title">Kein Lied ausgewählt</span>
                 <br>
-                <span class="Musik-small" id="Musik-name">Hey guys</span>
+                <span class="Musik-small" id="Musik-name">Wähle ein Lied aus der Playlist</span>
+            </div>
+            <div class="Musikplayer-progress">
+                <span class="Musikplayer-time" id="time-current">0:00</span>
+                <div class="Musikplayer-progressbar" id="progress-bar">
+                    <div class="Musikplayer-progressbar-fill" id="progress-fill"></div>
+                </div>
+                <span class="Musikplayer-time" id="time-total">0:00</span>
             </div>
             <div class="Musikplayer-kontroll">
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/repeat_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/skip_previous_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/pause_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/skip_next_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/shuffle_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
-                <div class="Musikplayer-btn"><img src="src/Bilder/Icon/Musikplayer/menu_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-repeat"><img src="src/Bilder/Icon/Musikplayer/repeat_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-prev"><img src="src/Bilder/Icon/Musikplayer/skip_previous_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-play"><img src="src/Bilder/Icon/Musikplayer/play_arrow_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-next"><img src="src/Bilder/Icon/Musikplayer/skip_next_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-shuffle"><img src="src/Bilder/Icon/Musikplayer/shuffle_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+                <div class="Musikplayer-btn" id="btn-menu"><img src="src/Bilder/Icon/Musikplayer/menu_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div>
+            </div>
+            <div class="Musikplayer-volume">
+                <img src="src/Bilder/Icon/music_note_2_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg" class="Musikplayer-volume-icon">
+                <div class="Musikplayer-volumebar" id="volume-bar">
+                    <div class="Musikplayer-volumebar-fill" id="volume-fill"></div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="Musikplayer-menü">
+        <div class="Musikplayer-menü-content">
+            <div class="Musikplayer-menü-tools">
+                <div class="Musikplayer-menü-btn" id="btn-upload"><img src="src/Bilder/Icon/Musikplayer/upload_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>Hochladen deine Musik!</p></div>
+                <div class="Musikplayer-menü-löschen-btn" id="btn-delete"><img src="src/Bilder/Icon/Musikplayer/bomb_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"><p>LÖSCHEN DEINE GANZE PLAYLIST</p></div>
+            </div>
+            <p class="Musikplayer-bold">Dein Playlist!</p>
+            <div class="Musikplayer-playlist" id="playlist-container">
+                <p class="Musikplayer-playlist-center" id="playlist-empty">Oh crap ist leer... :(</p>
+            </div>
+        </div>
+    </div>
+
 
     <div class="Header-div" id="home">
         <div class="Header-hintergrund">
@@ -73,7 +101,7 @@
                     <div class="Header-line"></div>
                     <ul>
                         <li>Ganz simple style und cool!</li>
-                        <li>Ok verstehten in JavaScript</li>
+                        <li>Ok verstechen auf JavaScript</li>
                         <li>Manchal fügt den Musikplayer! (das ist ein Schätz)</li>
                         <li>Langsam verbessert den Style!</li>
                     </ul>
@@ -98,6 +126,7 @@
                         <ul>
                             <li>Lenovo ideapad 3 chromebook</li>
                             <p>Betriebsystem: Fedora + ChromeOS (Duel booting)</p>
+                            <p>Prozess: Intel Celeron N4500</p>
                             <p>Speicherplatz: 128gb + 256Gb sd karte</p>
                             <p>Ram: 8Gb LPPDR4</p>
 
@@ -210,10 +239,20 @@
             <p align="center">Gibt es Mehere Repo in meine Github!</p>
         </div>
         <div class="cooleslinen"></div>
+        <div class="Haupt-projekte">
+            <h2>Re.vie Projekten!</h2>
+            <div class="Header-line"></div>
+            <p>Ich habe <strong><u>0</u></strong> Re.ive veröfftenlich Projekten auf Github! du kannst besuchen Website oder Qullecode lessen!</p>
+            <div class="Projekten-grid"></div>
+        </div>
+        <div class="cooleslinen"></div>
         <div class="Haupt-footer">
-            <p align="center" class="Footer-p">Mayi.-oi 2026 | Powered von: <a style="color: #3a405e; font-weight: 600;" href="https://www.netlify.com">Netfily!</a></p>
+            <p align="center" class="Footer-p">Mayi.-oi 2026 | Powered von: <a style="color: #3a405e; font-weight: 600;" href="https://www.netlify.com">Netfily!</a>
+                <br> Musik quelle: <a style="color: #3a405e; font-weight: 600;" href="https://nyalpaca.booth.pm/">nyalpaca</a> und <a style="color: #3a405e; font-weight: 600;" href="https://monaka-bgm.booth.pm">monaka-bgm</a> für geilen Musik! :D
+            </p>
         </div>
     </div>
+<script src="JavaScript/Musikplayer.js"></script>
 <script src="JavaScript/toggle.js"></script>
 </body>
 </html>
