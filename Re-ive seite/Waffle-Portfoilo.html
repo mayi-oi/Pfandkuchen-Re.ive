@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffle Portfolio</title>
+    <link rel="stylesheet" href="/src/Re-ive css/Waffle-Portfolio.css">
+    <link rel="stylesheet" href="/src/Schriftart/font.css">
+</head>
+<body>
+<audio id="SingleAudio-ding" loop><source src="/src/Musik/Evan Fong - This Ones For Me (Official Audio).mp3"></audio>
+
+<div class="Navbar">
+    <div class="Navbar-btn" onclick="window.open('/index.html', '_blank')"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/home_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24 (1).svg"></div> <!-- Verlassen zur "index.html" -->
+    <div class="Navbar-btn" onclick="audioPlay()"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/music_note_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div> <!-- Hintergrund musik -->
+</div>
+
+<div class="Headercontent">
+    <div class="Headercontent-hintergrund">
+        <img class="Content-background" src="/src/Hintergrund/Bilder/marek-piwnicki-rwcONvax9qE-unsplash.jpg">
+    </div>
+    <div class="Header-wilkommen">
+        <img class="Header-pfp" src="https://avatars.githubusercontent.com/u/253491203?v=4" width="164" height="164">
+        <h2 class="Headerbold">Mayi.-oi</h2>
+        <p>Dümmste und dummkopf Web-entwickler, GitHub nutzter allem Zeit!</p>
+        <div class="Header-links">
+            <div onclick="window.open('https://github.com/mayi-oi', '_blank')" class="Header-links-btn"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/github-fill.svg"><p>mayi-oi</p></div>
+            <div onclick="window.open('https://osu.ppy.sh/users/32215749', '_blank')" class="Header-links-btn"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/osu-lazer-logo-white.62cae952.svg"><p>untitledplayer</p></div>
+            <div onclick="window.open('https://steamcommunity.com/id/mayi-oi', '_blank')" class="Header-links-btn"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/steam-fill.svg"><p>Print("Mayi.-oi!")</p></div>
+            <div onclick="window.open('https://www.youtube.com/@mayi.-oi', '_blank')" class="Header-links-btn"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/youtube-fill.svg"><p>@Mayi.-oi</p></div>
+        </div>
+    </div>
+    <div class="Hauptcontent-box">
+        <h2>Über mich! (Wo fragt?)</h2>
+        <div class="Hauptcontent-text-box">
+            <p>Hi! ich bin Mayi.-oi einen Web-entwickler und Nächsten App-entwickler!
+                <br> Meine cool Ziel ist Open source, das Jemand kann durchlesen oder nimmt und bleibt deine Daten! :)
+                <br> manchmal ich hate random tolle idee, dass niemand fragt für Grund lol</p>
+        </div>
+        <h2>Über geilen projekt!</h2>
+        <div class="Hauptcontent-text-box">
+            <p>So das ist ein Re.ive projekt ist ein Revive Website projekten für mein alle alten veröffentlichen repo mit moderen style und neues Design style!
+                <br> Hier ist erste Re.ive projekt ich habe gewählt wegen alte <a href="https://waffle-portfolio.vercel.app">Waffle Portfolio</a> ist... outdated und (Mein persönlich) ugly dass wegen ;)
+                <br> Für mehr projekten du kannst geht zur Startseite für Besuchen und Quelle code sehen!</p>
+        </div>
+    </div>
+    <div class="Hauptcontent-box">
+        <p>Mayi.-oi 2026 | Musik quelle: This one for me vom: Evan fong!</p>
+    </div>
+</div>
+<script>
+    function audioPlay() {
+        const audio = document.getElementById('SingleAudio-ding');
+        audio.volume = 0.3;
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+    font-family: Google-sans;
+    cursor: default;
+    background-color: #e4e6ff;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    gap: 8px;
+    padding: 8px 18px;
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / 0.47), transparent);
+    z-index: 9999999;
+}
+
+.Navbar-btn {
+    display: flex;
+    padding: 14px 14px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.34);
+    cursor: pointer;
+    transition: all 0.14s ease;
+}
+
+.Navbar-btn:hover {
+    background-color: #aebbee;
+}
+
+.Navbar-btn img {
+    width: 24px;
+}
+
+.Headercontent {
+    position: relative;
+    overflow: hidden;
+    padding: 180px 18px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.24);
+}
+
+.Headercontent-hintergrund {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.Content-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Header-wilkommen {
+    padding: 18px 18px;
+    border: dashed 2px rgb(255 255 255 / 0.45);
+    border-radius: 14px;
+    backdrop-filter: blur(14px);
+    background-color: rgb(0 0 0 / 0.25);
+    color: #ffffff;
+}
+
+.Headerbold {
+    font-size: 2.5rem;
+    line-height: 0;
+    transition: all 0.2s ease;
+}
+
+.Headerbold:hover {
+    color: #e4e6ff;
+}
+
+.Header-links {
+    display: flex;
+    gap: 14px;
+}
+
+.Header-links-btn {
+    display: flex;
+    gap: 8px;
+    opacity: 0.4;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Header-links-btn:hover {
+    opacity: 1;
+}
+
+.Header-links-btn img {
+    width: 32px;
+}
+
+.Header-pfp {
+    border-radius: 50%;
+}
+
+.Hauptcontent {
+    margin: auto;
+    width: 95%;
+}
+
+.Hauptcontent-box {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 8px 18px;
+    border: dashed 2px rgb(255 255 255 / 0.45);
+    border-radius: 14px;
+    backdrop-filter: blur(14px);
+    background-color: rgb(0 0 0 / 0.25);
+    color: #ffffff;
+}
+
+.Hauptcontent-text-box {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 4px 18px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.35);
+}
+
+.Hauptcontent-text-box a {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .Header-links {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
