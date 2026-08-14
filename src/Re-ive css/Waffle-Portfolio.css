@@ -1,7 +1,6 @@
 body {
     font-family: Google-sans;
     cursor: default;
-    background-color: #e4e6ff;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -41,7 +40,7 @@ body {
 .Headercontent {
     position: relative;
     overflow: hidden;
-    padding: 180px 18px;
+    padding: 120px 18px;
     border-radius: 14px;
     background-color: rgb(0 0 0 / 0.24);
 }
@@ -121,7 +120,7 @@ body {
     padding: 8px 18px;
     border: dashed 2px rgb(255 255 255 / 0.45);
     border-radius: 14px;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(4px);
     background-color: rgb(0 0 0 / 0.25);
     color: #ffffff;
 }
@@ -134,15 +133,46 @@ body {
     background-color: rgb(0 0 0 / 0.35);
 }
 
+.Hauptcontent-text-box h2 {
+    font-size: 1rem;
+}
+
 .Hauptcontent-text-box a {
     font-weight: 600;
     color: #ffffff;
+}
+
+.Hauptcontent-info {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4px 18px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.35);
+}
+
+.Info-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 8px;
+}
+
+.Info-box img {
+    width: 32px;
 }
 
 @media (max-width: 768px) {
     .Header-links {
         width: 100%;
         display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .Hauptcontent-info {
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
 }
