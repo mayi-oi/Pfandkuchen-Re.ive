@@ -175,4 +175,9 @@ body {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+
+    .Info-box {
+        align-content: normal;
+        justify-content: left;
+    }
 }
