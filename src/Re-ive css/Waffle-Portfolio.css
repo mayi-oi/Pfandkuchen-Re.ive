@@ -137,7 +137,7 @@ body {
     font-size: 1rem;
 }
 
-.Hauptcontent-text-box a {
+.Hauptcontent-text-box a, .Hauptcontent-box a {
     font-weight: 600;
     color: #ffffff;
 }
@@ -148,6 +148,26 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 4px 18px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.35);
+}
+
+.Hauptcontent-row-info {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 18px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.35);
+}
+
+.Rows-box {
+    width: 100%;
+    padding: 4px 14px;
     border-radius: 14px;
     background-color: rgb(0 0 0 / 0.35);
 }
