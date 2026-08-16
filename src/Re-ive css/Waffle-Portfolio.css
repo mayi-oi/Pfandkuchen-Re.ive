@@ -184,6 +184,32 @@ body {
     width: 32px;
 }
 
+.Hauptcontent-info-box {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 14px 8px;
+    border-radius: 14px;
+    background-color: rgb(0 0 0 / 0.35);
+}
+
+.Zeitlinien-box {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 14px 8px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 0.5);
+    font-size: 1rem;
+}
+
+.Zeitlinien-header {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .Header-links {
         width: 100%;
@@ -191,7 +217,7 @@ body {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    .Hauptcontent-info {
+    .Hauptcontent-info,.Hauptcontent-info-box {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
