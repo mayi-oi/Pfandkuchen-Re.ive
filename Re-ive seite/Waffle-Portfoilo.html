@@ -10,15 +10,19 @@
 <body>
 <audio id="SingleAudio-ding" loop><source src="/src/Musik/まだゆめのなか.mp3"></audio>
 
-<div class="Navbar">
-    <div class="Navbar-btn" onclick="window.open('/index.html', '_blank')"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/home_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24 (1).svg"></div> <!-- Verlassen zur "index.html" -->
-    <div class="Navbar-btn" onclick="audioPlay()"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/music_note_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div> <!-- Hintergrund musik -->
-</div>
-
-<div class="Headercontent">
-    <div class="Headercontent-hintergrund">
-        <img class="Content-background" src="/src/Hintergrund/Bilder/marek-piwnicki-rwcONvax9qE-unsplash.jpg">
+<div class="Seiten-wrapper">
+    <div class="Seiten-video">
+        <video class="Seiten-video-el" autoplay loop muted>
+            <source src="/src/Hintergrund/Video/fishing-frogs.1920x1080.mp4">
+        </video>
     </div>
+
+    <div class="Navbar">
+        <div class="Navbar-btn" onclick="window.open('/index.html', '_blank')"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/home_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24 (1).svg"></div> <!-- Verlassen zur "index.html" -->
+        <div class="Navbar-btn" onclick="audioPlay()"><img src="/src/Bilder/Icon/Re-ive bilder/Waffle-Portfolio/music_note_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg"></div> <!-- Hintergrund musik -->
+    </div>
+    <br>
+    <div class="Headercontent-2">
     <div class="Header-wilkommen">
         <img class="Header-pfp" src="https://avatars.githubusercontent.com/u/253491203?v=4" width="164" height="164">
         <h2 class="Headerbold">Mayi.-oi</h2>
@@ -71,8 +75,24 @@
         </div>
     </div>
     <div class="Hauptcontent-box">
+        <h2>Faq!</h2>
+        <div class="Hauptcontent-faq-box">
+            <h2>Was "Mayi-oi" etwas bedeutet?</h2>
+            <p>Die nutzername hat keine bedeutung außer "oi" bedeutet "hey!" auf Englisch!</p>
+        </div>
+        <div class="Hauptcontent-faq-box">
+            <h2>Warum du nutzest WebStrom?</h2>
+            <p>Wegen ich brauche "straight out of box" und schöner ui/ux und geile name!</p>
+        </div>
+        <div class="Hauptcontent-faq-box">
+            <h2>Welche hauptschrift nutzt du?</h2>
+            <p>Google sans und Fredoka!</p>
+        </div>
+    </div>
+    <div class="Hauptcontent-box">
         <p>Mayi.-oi 2026 | Musik quelle: まだゆめのなか von: <a href="https://www.youtube.com/@shiratamarule">白玉るーる!</a></p>
     </div>
+</div>
 </div>
 <script>
     function audioPlay() {

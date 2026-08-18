@@ -1,11 +1,41 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Google-sans;
     cursor: default;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.Seiten-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+.Seiten-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.Seiten-video-el {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+    object-fit: cover;
 }
 
 .Navbar {
@@ -37,38 +67,16 @@ body {
     width: 24px;
 }
 
-.Headercontent {
-    position: relative;
-    overflow: hidden;
-    padding: 120px 18px;
-    border-radius: 14px;
-    background-color: rgb(0 0 0 / 0.24);
-}
-
-.Headercontent-hintergrund {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.Content-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+.Headercontent-2 {
+    margin: auto;
+    width: 85%;
 }
 
 .Header-wilkommen {
     padding: 18px 18px;
     border: dashed 2px rgb(255 255 255 / 0.45);
     border-radius: 14px;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(8px);
     background-color: rgb(0 0 0 / 0.25);
     color: #ffffff;
 }
@@ -92,8 +100,10 @@ body {
     display: flex;
     gap: 8px;
     opacity: 0.4;
+    mix-blend-mode: lighten;
     color: #ffffff;
     font-size: 1rem;
+    transition: all 0.12s ease;
     cursor: pointer;
 }
 
@@ -120,17 +130,21 @@ body {
     padding: 8px 18px;
     border: dashed 2px rgb(255 255 255 / 0.45);
     border-radius: 14px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     background-color: rgb(0 0 0 / 0.25);
     color: #ffffff;
 }
 
-.Hauptcontent-text-box {
+.Hauptcontent-text-box, .Hauptcontent-faq-box {
     margin-top: 8px;
     margin-bottom: 8px;
     padding: 4px 18px;
     border-radius: 14px;
     background-color: rgb(0 0 0 / 0.35);
+}
+
+.Hauptcontent-faq-box h2 {
+    font-size: 1.3rem;
 }
 
 .Hauptcontent-text-box h2 {
@@ -215,6 +229,10 @@ body {
         width: 100%;
         display: grid;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .Hautpcontent-2 {
+        width: 100%;
     }
 
     .Hauptcontent-info,.Hauptcontent-info-box {
