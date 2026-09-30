@@ -46,7 +46,7 @@ body {
     display: flex;
     gap: 8px;
     padding: 8px 18px;
-    background-image: linear-gradient(to bottom, rgb(0 0 0 / 0.47), transparent);
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / 0.57), transparent);
     z-index: 9999999;
 }
 
@@ -79,10 +79,16 @@ body {
     backdrop-filter: blur(8px);
     background-color: rgb(0 0 0 / 0.25);
     color: #ffffff;
+    animation: cool-intro 0.6s;
+}
+
+@keyframes cool-intro {
+  from {opacity: 0; background-color: rgb(255 255 255 / 0.75); transform: translateY(-18px);}
+    to {opacity: 1; background-color: rgb(0 0 0 / 0.25); transform: translateY(0);}
 }
 
 .Headerbold {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     line-height: 0;
     transition: all 0.2s ease;
 }
@@ -133,6 +139,7 @@ body {
     backdrop-filter: blur(8px);
     background-color: rgb(0 0 0 / 0.25);
     color: #ffffff;
+    animation: cool-intro 0.6s;
 }
 
 .Hauptcontent-text-box, .Hauptcontent-faq-box {
